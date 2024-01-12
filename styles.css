@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.game{
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+    
+.player {
+    color: white;
+    scale: 1;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: grid;
+    place-items: center;
+    transition: all 150ms ease-in-out;
+}
+
+.box.win{
+    background-color: green;
+}
+
+#b1, #b2, #b4, #b5 {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+#b7, #b8{
+    border-right: 2px solid white;
+}
+
+#b3, #b6{
+    border-bottom: 2px solid white;
+}
+
+.result {
+    display: none;
+}
+
+.result.active{
+    display: block;
+    color: white;
+    margin-top: 5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+    cursor: pointer;
+}
